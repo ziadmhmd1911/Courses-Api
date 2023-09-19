@@ -1,0 +1,1518 @@
+{
+	"info": {
+		"_postman_id": "cac6331f-5035-425d-a3d3-80dac67d3754",
+		"name": "Node-Courses-Api",
+		"description": "This collection contains sample request from this \\[API\\](StartFragment[coursesapi-vbxu.onrender.com](https://coursesapi-vbxu.onrender.com/)EndFragment\n\nIt contains request for Users & Courses :\n\n_**Users:**_\n\n**Note: USER HAVE THREE ROLES (ADMIN , USER , MANAGER) , so there is specific request the user can not do it like** _**(get-all-users , edit-course , create-course, delete-course)**_ **....**\n\n- get-all-users **(GET)**\n    \n- register-user **(POST)**\n- login-user **(POST)**\n    \n\n_**Courses:**_\n\n- Get-Courses **(GET)**\n- Get-Single-Course **(GET)**\n- Edit-Course **(PATCH)**\n- Create-Course **(POST)**\n- Delete-Course **(DELETE)**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29594859"
+	},
+	"item": [
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Get-Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base/url}}/api/courses",
+							"host": [
+								"{{base/url}}"
+							],
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get-Courses [Success]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base/url}}api/courses",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:07:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fa61c5e2f24c2-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a7-pov7RR0o3YO2CHihvwXYKuzDlwA\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"courses\": [\n            {\n                \"_id\": \"64fd122d9906fd47c73f55cf\",\n                \"title\": \"Next\",\n                \"price\": 400\n            },\n            {\n                \"_id\": \"64fd18dc5ff1fa68de4ee9c3\",\n                \"title\": \"NestJS\",\n                \"price\": 400\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "Get-Courses [Unsuccessful]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base/url}}api/coursesqq",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"coursesqq"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:32:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fca89aea10215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-rfDA81R5l+XWbH8XLJv1CeFxDH8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"This Resource Is Not Availabe\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get-Single-Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base/url}}/api/courses/1",
+							"host": [
+								"{{base/url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get-Single-Course [Success]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base/url}}api/courses/64fd122d9906fd47c73f55cf",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses",
+										"64fd122d9906fd47c73f55cf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:34:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fcd9f2c790215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6c-98YMM5lY2aSMS9/Hp+3D7cytXAA\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"course\": {\n            \"_id\": \"64fd122d9906fd47c73f55cf\",\n            \"title\": \"Next\",\n            \"price\": 400,\n            \"__v\": 0\n        }\n    }\n}"
+						},
+						{
+							"name": "Get-Single-Course [Unsuccess]",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base/url}}api/courses/64fd122d9906fd47c73f55",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses",
+										"64fd122d9906fd47c73f55"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:34:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fce028bba0215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a5-Jd82flSdZRSj8rXGLLVdzaBvjxY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Cast to ObjectId failed for value \\\"64fd122d9906fd47c73f55\\\" (type string) at path \\\"_id\\\" for model \\\"Course\\\"\",\n    \"code\": 500,\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit-Course",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Edit Course\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base/url}}/api/courses/1",
+							"host": [
+								"{{base/url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit-Course [Unsuccess Invalid Id]",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Edit Course\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base/url}}api/courses/1",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses",
+										"1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:36:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fd06618b60215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-L/E6ej76YHu9unpMmOhemaKt54c\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Cast to ObjectId failed for value \\\"1\\\" (type string) at path \\\"_id\\\" for model \\\"Course\\\"\",\n    \"code\": 500,\n    \"data\": null\n}"
+						},
+						{
+							"name": "Edit-Course [Edited Successfully]",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Edit Course\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base/url}}api/courses/64fd122d9906fd47c73f55cf",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses",
+										"64fd122d9906fd47c73f55cf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:36:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fd1247a3b0215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"83-wgzJdQcZPjxgOgpXyuBbhT4su5g\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"course\": {\n            \"acknowledged\": true,\n            \"modifiedCount\": 1,\n            \"upsertedId\": null,\n            \"upsertedCount\": 0,\n            \"matchedCount\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create-Course",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{JWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Next\",\r\n    \"price\": 400\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base/url}}api/courses",
+							"host": [
+								"{{base/url}}api"
+							],
+							"path": [
+								"courses"
+							]
+						},
+						"description": "This is how you can add course you should provide **(Title For Course , Price)**"
+					},
+					"response": [
+						{
+							"name": "Create-Course [Invalid User Try To Add Course]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{JWT}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Next\",\r\n    \"price\": 400\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base/url}}api/courses",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:42:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fd9b7ddec0215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-btG54fCkv5rb59wLuLGgFCFR7SI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"This User Is Not Allowed To Perform This Action\",\n    \"code\": 403,\n    \"data\": null\n}"
+						},
+						{
+							"name": "Create-Course [Success] \"Manager Role\"",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{JWT}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Next\",\r\n    \"price\": 400\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base/url}}api/courses",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:43:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fda8d7c020215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6c-dUYufjcUGManED7KUSSbwB+d9Yk\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"course\": {\n            \"title\": \"Next\",\n            \"price\": 400,\n            \"_id\": \"65094307d87841c89ca1b8f9\",\n            \"__v\": 0\n        }\n    }\n}"
+						},
+						{
+							"name": "Create-Course  [Invalid] \"Admin Try\"",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{JWT}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Next\",\r\n    \"price\": 400\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base/url}}api/courses",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:44:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fdbd6df900215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-btG54fCkv5rb59wLuLGgFCFR7SI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"This User Is Not Allowed To Perform This Action\",\n    \"code\": 403,\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete-Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base/url}}/api/courses/1",
+							"host": [
+								"{{base/url}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						},
+						"description": "When you delete course it is deleted by provide a **specific id for this course**"
+					},
+					"response": [
+						{
+							"name": "Delete-Course [Invalid Id for course]",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{JWT}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base/url}}api/courses/1",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses",
+										"1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:45:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fddd1185b0215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-L/E6ej76YHu9unpMmOhemaKt54c\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Cast to ObjectId failed for value \\\"1\\\" (type string) at path \\\"_id\\\" for model \\\"Course\\\"\",\n    \"code\": 500,\n    \"data\": null\n}"
+						},
+						{
+							"name": "Delete-Course  [Success Delete] \"Admin And Manager\"",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{JWT}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base/url}}api/courses/65094307d87841c89ca1b8f9",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"courses",
+										"65094307d87841c89ca1b8f9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:46:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fdefc5f060215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20-bff5r/a5MyNNWy9hjn8a8pOLDxA\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			],
+			"description": "**This is All About Courses Side of my API.**"
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "get-all-users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base/url}}/api/users",
+							"host": [
+								"{{base/url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-all-users [Success] \"Admin And Manager\"",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{JWT}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base/url}}api/users",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:47:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fe07d6aa50215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f30-H+ZV0ffBOGe1rMnG3zLK+cKL+WU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"users\": [\n            {\n                \"avatar\": \"uploads/profile.jpg\",\n                \"_id\": \"64fd0ed47cd36a87e967834a\",\n                \"firstName\": \"Ziad\",\n                \"lastName\": \"Mohamed\",\n                \"email\": \"ziadmhmd991@gmail.com\",\n                \"role\": \"USER\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InppYWRtaG1kOTkxQGdtYWlsLmNvbSIsImlkIjoiNjRmZDBlZDQ3Y2QzNmE4N2U5Njc4MzRhIiwiaWF0IjoxNjk0MzA2MDA0LCJleHAiOjE2OTQzMDYwNjR9.evMOGJHu-VnNwAiVXoil92WSlNw7H2--EBUCe83PVIA\"\n            },\n            {\n                \"avatar\": \"uploads/profile.jpg\",\n                \"_id\": \"64fd0f35891e77e71ac60749\",\n                \"firstName\": \"Ziad\",\n                \"lastName\": \"Mohamed\",\n                \"email\": \"ziadmhmd9911@gmail.com\",\n                \"role\": \"ADMIN\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InppYWRtaG1kOTkxMUBnbWFpbC5jb20iLCJpZCI6IjY0ZmQwZjM1ODkxZTc3ZTcxYWM2MDc0OSIsImlhdCI6MTY5NDMwNjEwMSwiZXhwIjoxNjk0MzA2MTYxfQ.x-HUFXsmBIhvwEf4NS6CTEgjnpMcTo4CDfg2Ot7k_Rc\"\n            },\n            {\n                \"avatar\": \"uploads/profile.jpg\",\n                \"_id\": \"64fd142feedc94b2c1077e89\",\n                \"firstName\": \"Ziad\",\n                \"lastName\": \"Mohamed\",\n                \"email\": \"ziad@gmail.com\",\n                \"role\": \"ADMIN\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InppYWRAZ21haWwuY29tIiwiaWQiOiI2NGZkMTQyZmVlZGM5NGIyYzEwNzdlODkiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2OTQzMDczNzUsImV4cCI6MTY5NDMwNzQzNX0.Ovn84fbrciJyCZupNPooa8cZSRGTs1dPBVUhTuVOQhk\"\n            },\n            {\n                \"avatar\": \"uploads/profile.jpg\",\n                \"_id\": \"64fd18d05ff1fa68de4ee9c0\",\n                \"firstName\": \"Ziad\",\n                \"lastName\": \"Mohamed\",\n                \"email\": \"manager@gmail.com\",\n                \"role\": \"MANAGER\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbmFnZXJAZ21haWwuY29tIiwiaWQiOiI2NGZkMThkMDVmZjFmYTY4ZGU0ZWU5YzAiLCJyb2xlIjoiTUFOQUdFUiIsImlhdCI6MTY5NDMwODU2MCwiZXhwIjoxNjk0MzA4NjIwfQ.skZU-F-uuETn1rwVKBio2mgvJGG1rJWb4D6KMmFhmJ0\"\n            },\n            {\n                \"_id\": \"64fd25d6e71a9aef30b3ce2f\",\n                \"firstName\": \"Ziad\",\n                \"lastName\": \"Mohamed\",\n                \"email\": \"ziad16@gmail.com\",\n                \"role\": \"MANAGER\",\n                \"avatar\": \"uploads/profile.jpg\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InppYWQxNkBnbWFpbC5jb20iLCJpZCI6IjY0ZmQyNWQ2ZTcxYTlhZWYzMGIzY2UyZiIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNjk0MzExODk0LCJleHAiOjE2OTQzMTE5NTR9.LyAPsDsKvBsFNv2qL4aqwfRB5dJjQ07XSzEeIE05z2c\"\n            },\n            {\n                \"_id\": \"64fd282fc05c15f7ffc62e3d\",\n                \"firstName\": \"maged\",\n                \"lastName\": \"ali\",\n                \"email\": \"maged@gmail.com\",\n                \"role\": \"MANAGER\",\n                \"avatar\": \"uploads/profile.jpg\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZ2VkQGdtYWlsLmNvbSIsImlkIjoiNjRmZDI4MmZjMDVjMTVmN2ZmYzYyZTNkIiwicm9sZSI6Ik1BTkFHRVIiLCJpYXQiOjE2OTQzMTI0OTUsImV4cCI6MTY5NDMxMjU1NX0.8iCN-BgGjA_ES6np3xYKATvKJsklaS_7TRvDGO6FbmU\"\n            },\n            {\n                \"_id\": \"64fd298f1c0501e71c0e0be5\",\n                \"firstName\": \"bahaa\",\n                \"lastName\": \"ali\",\n                \"email\": \"bahaa@gmail.com\",\n                \"role\": \"MANAGER\",\n                \"avatar\": \"uploads/profile.jpg\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhaGFhQGdtYWlsLmNvbSIsImlkIjoiNjRmZDI5OGYxYzA1MDFlNzFjMGUwYmU1Iiwicm9sZSI6Ik1BTkFHRVIiLCJpYXQiOjE2OTQzMTI4NDcsImV4cCI6MTY5NDMxMjkwN30.M92J2MwN0sf5LgYLl7QLF9KCRLQR0Tg-nIlK5yx529I\"\n            },\n            {\n                \"_id\": \"64fd29b7bb79637795fcec8f\",\n                \"firstName\": \"moha\",\n                \"lastName\": \"ali\",\n                \"email\": \"moha@gmail.com\",\n                \"role\": \"MANAGER\",\n                \"avatar\": \"uploads/profile.jpg\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGFAZ21haWwuY29tIiwiaWQiOiI2NGZkMjliN2JiNzk2Mzc3OTVmY2VjOGYiLCJyb2xlIjoiTUFOQUdFUiIsImlhdCI6MTY5NDMxMjg4NywiZXhwIjoxNjk0MzEyOTQ3fQ.4E3Hx0-yxs0GtWaIS2R-L00qCC8cO_4Sb2ZzDUDdis0\"\n            },\n            {\n                \"_id\": \"64fd2c0f97895fd6753ebc44\",\n                \"firstName\": \"moha1\",\n                \"lastName\": \"ali1\",\n                \"email\": \"moha1@gmail.com\",\n                \"role\": \"MANAGER\",\n                \"avatar\": \"uploads/profile.jpg\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGExQGdtYWlsLmNvbSIsImlkIjoiNjRmZDJjMGY5Nzg5NWZkNjc1M2ViYzQ0Iiwicm9sZSI6Ik1BTkFHRVIiLCJpYXQiOjE2OTQzMTM0ODcsImV4cCI6MTY5NDMxMzU0N30.XA5b6rYf45f6PHH-Yg_lFYkflVCnhEYUS7gdw6VLfI8\"\n            },\n            {\n                \"_id\": \"64fd2d2f49317cbeb71d92dc\",\n                \"firstName\": \"moha1\",\n                \"lastName\": \"ali1\",\n                \"email\": \"moha12@gmail.com\",\n                \"role\": \"MANAGER\",\n                \"avatar\": \"user-1694313774767.png\",\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGExMkBnbWFpbC5jb20iLCJpZCI6IjY0ZmQyZDJmNDkzMTdjYmViNzFkOTJkYyIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNjk0MzEzNzc1LCJleHAiOjE2OTQzMTM4MzV9.yUpsgN1n_UxRolGTbGHNqk8zgq9AdcLjSOh4kEJayvI\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "register-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Ziad\",\r\n    \"lastName\": \"Mohamed\",\r\n    \"email\": \"ziadmhmd991@gmail.com\",\r\n    \"password\": \"123aa123\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base/url}}api/users/register",
+							"host": [
+								"{{base/url}}api"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register-user [Already Exist User]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Ziad\",\r\n    \"lastName\": \"Mohamed\",\r\n    \"email\": \"ziadmhmd991@gmail.com\",\r\n    \"password\": \"123aa123\",\r\n    \"role\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base/url}}api/users/register",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:47:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fe15e79f70215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-TGH5EG05iGSbmd/RqMBM+fLD0PQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"fail\",\n    \"message\": \"User Already Exists\",\n    \"code\": 400,\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "login-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ziadmhmd99111@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base/url}}/api/users/login",
+							"host": [
+								"{{base/url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login-user [Success]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ziadmhmd9911@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base/url}}api/users/login",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:50:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fe5859aba0215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"113-4en3qv1yoF+tYSBSiu/bpivlhUQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InppYWRtaG1kOTkxMUBnbWFpbC5jb20iLCJpZCI6IjY0ZmQwZjM1ODkxZTc3ZTcxYWM2MDc0OSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5NTEwNjI0OSwiZXhwIjoxNjk1MTA2MzA5fQ.SnP63EQFNKdxLgf5825wauxzKHA8Lg7Mz5TGsM9_PYI\"\n    }\n}"
+						},
+						{
+							"name": "login-user [unsuccess]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ziadmhmd9911@gmail.com\",\r\n    \"password\": \"444\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base/url}}api/users/login",
+									"host": [
+										"{{base/url}}api"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 19 Sep 2023 06:51:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "808fe5e8ae720215-ZRH"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4f-qleu/jkweasAAERALnpwcJaAyxo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid Email Or Password\",\n    \"code\": 500,\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "preview",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
